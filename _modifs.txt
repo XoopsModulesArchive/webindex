@@ -1,0 +1,10 @@
+Passage à la version 1.1
+Ajout de 20 options dans xoops_version.php permettant de :
+	1) choisir le nom de la colonne
+	2) choisir, pour chaque colonne, si elle est visible ou pas
+- Modification de index.php afin d'attribuer au template le nom de chaque
+  colonne ainsi que sa visibilité
+- Modification du template afin de tenir comptes des modifications effectuée
+  dans index.php. Attention, j'ai changé 'titre' en 'title'
+- Modification de l'icone utilisé dans la recherche afin de prendre webindex_icon.gif
+- La recherche fonctionne et tient compte des droits

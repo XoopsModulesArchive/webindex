@@ -1,0 +1,134 @@
+<div class="item">
+<h1 align=center><{$module_name}></h1>
+
+<table class="outer" cellspacing="1">
+<tr class="itemHead">
+	    <th><{$infos.title}></th>
+	<{if $infos.zone01visibility == 1}>
+	    <th><{$infos.zone01}></th>
+	<{/if}>
+	<{if $infos.zone02visibility == 1}>
+	    <th><{$infos.zone02}></th>
+	<{/if}>
+	<{if $infos.zone03visibility == 1}>
+	    <th><{$infos.zone03}></th>
+	<{/if}>
+	<{if $infos.zone04visibility == 1}>
+	    <th><{$infos.zone04}></th>
+	<{/if}>
+	<{if $infos.zone05visibility == 1}>
+	    <th><{$infos.zone05}></th>
+	<{/if}>
+	<{if $infos.zone06visibility == 1}>
+	    <th><{$infos.zone06}></th>
+	<{/if}>
+	<{if $infos.zone07visibility == 1}>
+	    <th><{$infos.zone07}></th>
+	<{/if}>
+	<{if $infos.zone08visibility == 1}>
+	    <th><{$infos.zone08}></th>
+	<{/if}>
+	<{if $infos.zone09visibility == 1}>
+	    <th><{$infos.zone09}></th>
+	<{/if}>
+	<{if $infos.zone10visibility == 1}>
+	    <th><{$infos.zone10}></th>
+	<{/if}>
+	<{if $infos.adminlink == 1}>
+	<th width=15%><{$infos.admin}></th>
+	<{/if}>
+</tr>
+
+<{foreach item=index from=$indexes}>
+<{if $index.pid == 0}>
+	<tr class="itemHead" valign="middle">
+    	<td class="itemHead"><{$index.title}></td>
+	<{if $infos.zone01visibility == 1}>
+    	<td class="itemHead"><{$index.zone01}></td>
+	<{/if}>
+	<{if $infos.zone02visibility == 1}>
+    	<td class="itemHead"><{$index.zone02}></td>
+	<{/if}>
+	<{if $infos.zone03visibility == 1}>
+    	<td class="itemHead"><{$index.zone03}></td>
+	<{/if}>
+	<{if $infos.zone04visibility == 1}>
+    	<td class="itemHead"><{$index.zone04}></td>
+	<{/if}>
+	<{if $infos.zone05visibility == 1}>
+    	<td class="itemHead"><{$index.zone05}></td>
+	<{/if}>
+	<{if $infos.zone06visibility == 1}>
+    	<td class="itemHead"><{$index.zone06}></td>
+	<{/if}>
+	<{if $infos.zone07visibility == 1}>
+    	<td class="itemHead"><{$index.zone07}></td>
+	<{/if}>
+	<{if $infos.zone08visibility == 1}>
+    	<td class="itemHead"><{$index.zone08}></td>
+	<{/if}>
+	<{if $infos.zone09visibility == 1}>
+    	<td class="itemHead"><{$index.zone09}></td>
+	<{/if}>
+	<{if $infos.zone10visibility == 1}>
+    	<td class="itemHead"><{$index.zone10}></td>
+	<{/if}>
+
+	<{if $infos.adminlink == 1}>
+    	<td align=center valign=middle width='80'>
+			<a href='admin/index.php?op=edit&indexid=<{$index.id}>' target='_blank'><img src='images/icon/edit.gif' alt='<{$infos.edit}>'></a>
+			<a href='admin/index.php' target='_blank'><img src='images/icon/add.gif' alt='<{$infos.insert}>'></a>
+			<a href='admin/index.php?op=delete&indexid=<{$index.id}>' target='_blank'><img src='images/icon/delete.gif' alt='<{$infos.delete}>'></a>
+		</td>
+	<{/if}>
+</tr>
+<{else}>
+	<tr class="<{cycle values="even,odd}>" valign="middle">
+    	<td><{$index.title}></td>
+	<{if $infos.zone01visibility == 1}>
+    	<td><{$index.zone01}></td>
+	<{/if}>
+	<{if $infos.zone02visibility == 1}>
+    	<td><{$index.zone02}></td>
+	<{/if}>
+	<{if $infos.zone03visibility == 1}>
+    	<td><{$index.zone03}></td>
+	<{/if}>
+	<{if $infos.zone04visibility == 1}>
+    	<td><{$index.zone04}></td>
+	<{/if}>
+	<{if $infos.zone05visibility == 1}>
+    	<td><{$index.zone05}></td>
+	<{/if}>
+	<{if $infos.zone06visibility == 1}>
+    	<td><{$index.zone06}></td>
+	<{/if}>
+	<{if $infos.zone07visibility == 1}>
+    	<td><{$index.zone07}></td>
+	<{/if}>
+	<{if $infos.zone08visibility == 1}>
+    	<td><{$index.zone08}></td>
+	<{/if}>
+	<{if $infos.zone09visibility == 1}>
+    	<td><{$index.zone09}></td>
+	<{/if}>
+	<{if $infos.zone10visibility == 1}>
+    	<td><{$index.zone10}></td>
+	<{/if}>
+
+	<{if $infos.adminlink == 1}>
+    	<td align=center valign=middle width='80'>
+			<a href='admin/index.php?op=edit&indexid=<{$index.id}>' target='_blank'><img src='images/icon/edit.gif' alt='<{$infos.edit}>'></a>
+			<a href='admin/index.php' target='_blank'><img src='images/icon/add.gif' alt='<{$infos.insert}>'></a>
+			<a href='admin/index.php?op=delete&indexid=<{$index.id}>' target='_blank'><img src='images/icon/delete.gif' alt='<{$infos.delete}>'></a>
+		</td>
+	<{/if}>
+</tr>
+<{/if}>
+<{/foreach}>
+</table>
+
+<{if $infos.adminlink == 1}>
+	<div class="itemInfo" align=right>[<a href='admin/index.php'><{$infos.admin}></a>]</div>
+<{/if}>
+</div>

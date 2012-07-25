@@ -1,0 +1,111 @@
+<table class="outer" cellspacing="1">
+<tr class="head" align="center" valign="middle">
+	<td><{$block.title}></td>
+	<{if $block.zone01visibility == 1}>
+	    <td><{$block.columname01}></td>
+	<{/if}>
+	<{if $block.zone02visibility == 1}>
+	    <td><{$block.columname02}></td>
+	<{/if}>
+	<{if $block.zone03visibility == 1}>
+	    <td><{$block.columname03}></td>
+	<{/if}>
+	<{if $block.zone04visibility == 1}>
+	    <td><{$block.columname04}></td>
+	<{/if}>
+	<{if $block.zone05visibility == 1}>
+	    <td><{$block.columname05}></td>
+	<{/if}>
+	<{if $block.zone06visibility == 1}>
+	    <td><{$block.columname06}></td>
+	<{/if}>
+	<{if $block.zone07visibility == 1}>
+	    <td><{$block.columname07}></td>
+	<{/if}>
+	<{if $block.zone08visibility == 1}>
+	    <td><{$block.columname08}></td>
+	<{/if}>
+	<{if $block.zone09visibility == 1}>
+	    <td><{$block.columname09}></td>
+	<{/if}>
+	<{if $block.zone10visibility == 1}>
+	    <td><{$block.columname10}></td>
+	<{/if}>
+</tr>
+
+<{foreach item=index from=$block.indexes}>
+
+<{if $index.pid == 0}>
+
+	<tr class="itemHead" valign="middle">
+    	<td class="itemHead"><{$index.title}></td>
+	<{if $block.zone01visibility == 1}>
+    	<td class="itemHead"><{$index.zone01}></td>
+	<{/if}>
+	<{if $block.zone02visibility == 1}>
+    	<td class="itemHead"><{$index.zone02}></td>
+	<{/if}>
+	<{if $block.zone03visibility == 1}>
+    	<td class="itemHead"><{$index.zone03}></td>
+	<{/if}>
+	<{if $block.zone04visibility == 1}>
+    	<td class="itemHead"><{$index.zone04}></td>
+	<{/if}>
+	<{if $block.zone05visibility == 1}>
+    	<td class="itemHead"><{$index.zone05}></td>
+	<{/if}>
+	<{if $block.zone06visibility == 1}>
+    	<td class="itemHead"><{$index.zone06}></td>
+	<{/if}>
+	<{if $block.zone07visibility == 1}>
+    	<td class="itemHead"><{$index.zone07}></td>
+	<{/if}>
+	<{if $block.zone08visibility == 1}>
+    	<td class="itemHead"><{$index.zone08}></td>
+	<{/if}>
+	<{if $block.zone09visibility == 1}>
+    	<td class="itemHead"><{$index.zone09}></td>
+	<{/if}>
+	<{if $block.zone10visibility == 1}>
+    	<td class="itemHead"><{$index.zone10}></td>
+	<{/if}>
+
+</tr>
+<{else}>
+
+	<tr class="<{cycle values="even,odd}>" valign="middle">
+		<td><{$index.title}></td>
+		<{if $block.zone01visibility == 1}>
+		    <td><{$index.zone01}></td>
+		<{/if}>
+		<{if $block.zone02visibility == 1}>
+    		<td><{$index.zone02}></td>
+		<{/if}>
+		<{if $block.zone03visibility == 1}>
+	    	<td><{$index.zone03}></td>
+		<{/if}>
+		<{if $block.zone04visibility == 1}>
+    		<td><{$index.zone04}></td>
+		<{/if}>
+		<{if $block.zone05visibility == 1}>
+	    	<td><{$index.zone05}></td>
+		<{/if}>
+		<{if $block.zone06visibility == 1}>
+    		<td><{$index.zone06}></td>
+		<{/if}>
+		<{if $block.zone07visibility == 1}>
+	    	<td><{$index.zone07}></td>
+		<{/if}>
+		<{if $block.zone08visibility == 1}>
+    		<td><{$index.zone08}></td>
+		<{/if}>
+		<{if $block.zone09visibility == 1}>
+	    	<td><{$index.zone09}></td>
+		<{/if}>
+		<{if $block.zone10visibility == 1}>
+    		<td><{$index.zone10}></td>
+		<{/if}>
+	</tr>
+<{/if}>
+<{/foreach}>
+</table>
