@@ -30,7 +30,7 @@ function AddEditIndexForm($IndexId, $Action, $FormTitle, $titlevalue, $weightval
 	$sform->addElement(new XoopsFormText(_AM_WEBINDEX_WEIGHT, 'weight', 3, 4, $weightvalue), false);
 	$sform->addElement(new XoopsFormText(_AM_WEBINDEX_URL, 'url', 64, 256, $urlvalue), false);
 
-	$db =& Database::getInstance();
+	$db = Database::getInstance();
 	$xt = new XoopsTree($db->prefix("webindex"), "indexid", "pid");
 
 	ob_start();

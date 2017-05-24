@@ -31,7 +31,7 @@ class webindex
 	// Constructeur
 	function webindex($indexid=-1, $table='webindex')
 	{
-		$this->db =& Database::getInstance();
+		$this->db = Database::getInstance();
 		$this->table = $this->db->prefix($table);
 		if( $indexid != -1 ) {
 			$this->getIndex(intval($indexid));
@@ -89,7 +89,7 @@ class webindex
 
 	function store()
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$title = $myts->makeTboxData4Save($myts->censorString($this->title));
 		$url = $myts->makeTboxData4Save($myts->censorString($this->url));
 		$zone01= $myts->makeTareaData4Save($myts->censorString($this->zone01));
@@ -188,7 +188,7 @@ class webindex
 
 	function title($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		switch ( $format ) {
 		case "Show":
 			$title = $myts->makeTboxData4Show($this->title);
@@ -208,7 +208,7 @@ class webindex
 
 	function url($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		switch ( $format ) {
 		case "Show":
 			$url = $myts->makeTboxData4Show($this->url);
@@ -228,7 +228,7 @@ class webindex
 
 	function zone01($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone01;
 		switch ( $format ) {
 		case "Show":
@@ -251,7 +251,7 @@ class webindex
 
 	function zone02($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone02;
 		switch ( $format ) {
 		case "Show":
@@ -274,7 +274,7 @@ class webindex
 
 	function zone03($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone03;
 		switch ( $format ) {
 		case "Show":
@@ -297,7 +297,7 @@ class webindex
 
 	function zone04($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone04;
 		switch ( $format ) {
 		case "Show":
@@ -320,7 +320,7 @@ class webindex
 
 	function zone05($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone05;
 		switch ( $format ) {
 		case "Show":
@@ -343,7 +343,7 @@ class webindex
 
 	function zone06($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone06;
 		switch ( $format ) {
 		case "Show":
@@ -366,7 +366,7 @@ class webindex
 
 	function zone07($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone07;
 		switch ( $format ) {
 		case "Show":
@@ -389,7 +389,7 @@ class webindex
 
 	function zone08($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone08;
 		switch ( $format ) {
 		case "Show":
@@ -412,7 +412,7 @@ class webindex
 
 	function zone09($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone09;
 		switch ( $format ) {
 		case "Show":
@@ -435,7 +435,7 @@ class webindex
 
 	function zone10($format="Show")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$tmp=$this->zone10;
 		switch ( $format ) {
 		case "Show":
